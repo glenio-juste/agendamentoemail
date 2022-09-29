@@ -1,21 +1,29 @@
 package br.com.alura.business;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
+
+import br.com.alura.dao.AgendamentoEmailDao;
+import br.com.alura.entity.AgendamentoEmail;
 
 @Stateless
 public class AgendamentoEmailBusiness {
 	
-	public List<String> listarAgendamentosEmail(){
+	@Inject
+	private AgendamentoEmailDao agendamentoEmailDao;
+	
+	public List<AgendamentoEmail> listarAgendamentosEmail(){
 		
-		List<String> emails = new ArrayList<>();
+		return agendamentoEmailDao.listarAgendamentoEmail();
+	}
+	
+	
+	public void salvarAgendamentoEmail( AgendamentoEmail agendamentoEmail ) {
 		
-		emails.add("email1@teste.com");
-		emails.add("email2@teste.com");
-		
-		return emails;
+		agendamentoEmail.setEnviado(false);
+		agendamentoEmailDao.salvarAgendamentoEmail(agendamentoEmail);
 	}
 
 }
