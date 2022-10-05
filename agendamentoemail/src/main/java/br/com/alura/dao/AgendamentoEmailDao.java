@@ -23,6 +23,10 @@ public class AgendamentoEmailDao {
 	public void salvarAgendamentoEmail(AgendamentoEmail agendamentoEmail) {
 		entityManager.persist(agendamentoEmail);
 	}
+	
+	public void atualizarAgendamentoEmail(AgendamentoEmail agendamentoEmail) {
+		entityManager.merge(agendamentoEmail);
+	}
 
 	public List<AgendamentoEmail> listarAgendamentoEmailPorEmail(String email) {
 

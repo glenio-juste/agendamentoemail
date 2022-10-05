@@ -40,6 +40,41 @@ jboss-cli.bat --connect
 
 
 
+comandos para configurar um repositório de fila no Wildfly
+
+abrir o cmd e acessar a pasta do wildfly
+cd D:\Software\wildfly-15.0.1.Final\bin
+
+para conectar no jboss:
+jboss-cli.bat --connect
+
+
+jms-queue add --queue-address=EmailQueue --entries=java:/jms/queue/EmailQueue
+
+--
+
+E os atributos que o instrutor copia para a classe AgendamentoEmailTimer são os seguintes:
+
+@Inject
+@JMSConnectionFactory("java:jboss/DefaultJMSConnectionFactory")
+private JMSContext context;
+
+
+
+@Resource(mappedName = "java:/jms/queue/EmailQueue")
+private Queue queue;
+
+-- para ver a fila
+jms-queue list-messages --queue-address=EmailQueue
+
+
+
+
+
+
+
+
+
 
 
 
