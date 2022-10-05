@@ -73,7 +73,13 @@ jms-queue list-messages --queue-address=EmailQueue
 
 
 
-
+Que a transação padrão no Java EE e EJB é JTA (Java Transaction API)
+Que existem duas formas de marcação da transação: CMT (declarativa) e BMT (programática)
+Que uma transação CMT pode ser configurada pela anotação @TransactionAttribute
+Que existem dois tipos de exceções no mundo EJB, da aplicação e do sistema
+Que uma exceção da aplicação é prevista e não causa rollback, por padrão são exceções checked
+Que uma exceção do sistema é algo mais grave e causa rollback, por padrão são exceções unchecked
+Que a anotação @ApplicationException serve para configurar uma exceção como exceção da aplicação, mesmo sendo unchecked
 
 
 

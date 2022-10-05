@@ -22,16 +22,16 @@ public class AgendamentoEmail implements Serializable {
 	private Long id;
 
 	@Column
-	//@NotBlank(message="{agendamentoEmail.email.vazio}")
-	//@Email(message="{agendamentoEmail.email.invalido}")
+	@NotBlank(message="{agendamentoEmail.email.vazio}")
+	@Email(message="{agendamentoEmail.email.invalido}")
 	private String email;
 	
 	@Column
-	//@NotBlank(message="{agendamentoEmail.assunto.vazio}")
+	@NotBlank(message="{agendamentoEmail.assunto.vazio}")
 	private String assunto;
 	
 	@Column
-	//@NotBlank(message="{agendamentoEmail.mensagem.vazio}")
+	@NotBlank(message="{agendamentoEmail.mensagem.vazio}")
 	private String mensagem;
 
 	@Column

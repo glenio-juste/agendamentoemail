@@ -24,7 +24,7 @@ import br.com.alura.interception.Logger;
 
 @Stateless
 @Logger
-@TransactionManagement(TransactionManagementType.BEAN)
+@TransactionManagement(TransactionManagementType.CONTAINER)
 public class AgendamentoEmailBusiness {
 
 	@Inject
@@ -51,8 +51,7 @@ public class AgendamentoEmailBusiness {
 
 		agendamentoEmail.setEnviado(false);
 		agendamentoEmailDao.salvarAgendamentoEmail(agendamentoEmail);
-		
-		throw new RuntimeException();
+				
 	}
 
 	public List<AgendamentoEmail> listarAgendamentoEmailsNaoEnviados() {
