@@ -1,2 +1,5 @@
 # Java sources
 *.java          text diff=java
+
+* linguist-vendored
+*.html linguist-vendored=false
