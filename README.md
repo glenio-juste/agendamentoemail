@@ -1,5 +1,5 @@
 # agendamentoemail
-## Curso de EJB com Java EE 8: API Rest com WildFly 15
+### Curso de EJB com Java EE 8: API Rest com WildFly 15
 
 abrir o cmd e acessar a pasta bin do wildfly
 
