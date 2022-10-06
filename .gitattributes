@@ -2,4 +2,4 @@
 *.java          text diff=java
 
 * linguist-vendored
-*.html linguist-vendored=false
+*.html linguist-vendored=true
